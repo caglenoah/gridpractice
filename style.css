@@ -1,21 +1,28 @@
 .container {
     display: grid;
-
     grid-template-columns: auto auto auto auto;
-    grid-template-rows: 45pt 55pt 180pt 25pt 45pt;
+    grid-template-rows: 45pt 55pt 180pt 180pt 25pt 45pt;
 /* i dont really understand this following section*/
-    grid-template-areas: 
+/* notice the differences and changes*/
+grid-template-areas: 
+"... header ..."
+"... aside ..."
+"... main ..."
+"... main ..."
+"... banner ..."
+"... footer ..."
+"... nav ..."
+/* Do you see how they're stacked upon one another now? /*
+
+/*grid-template-areas: 
     "header header header"
     "nav nav aside"
     "main main aside"
     "main main aside"
     /*the ... you see in the code stand for "blank" space on the screen. You saw this in the first example too: "... banner ...".*/
-    "... banner ..."
-    "footer footer footer"
+   /* "... banner ..."
+    "footer footer footer" */
 }
-
-
-
 header {
     /* give each element some color to see more easily */
     background-color: bisque;
