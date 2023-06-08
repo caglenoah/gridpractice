@@ -1,18 +1,51 @@
-.container {
+@media (min-width: 700px) {
+    .container {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: 
+        "header header"
+        "nav aside"
+        "main main"
+        "footer banner";
+        color: green;
+    }
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+}
+    @media (max-width: 699px) {
+        .container {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "header "
+            "nav"
+            "aside"
+            "main"
+            "footer"
+            "banner";
+            color: blue;
+        }
+
+nav ul {
+    display:flex;
+    justify-content: space-evenly;
+ }
+}
+/*.container {
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-template-rows: 45pt 55pt 180pt 180pt 25pt 45pt;
 /* i dont really understand this following section*/
 /* notice the differences and changes*/
-grid-template-areas: 
+/*grid-template-areas: 
 "... header ..."
 "... aside ..."
 "... main ..."
 "... main ..."
 "... banner ..."
 "... footer ..."
-"... nav ..."
-/* Do you see how they're stacked upon one another now? /*
+"... nav ..."/
+ Do you see how they're stacked upon one another now? */
 
 /*grid-template-areas: 
     "header header header"
@@ -20,9 +53,9 @@ grid-template-areas:
     "main main aside"
     "main main aside"
     /*the ... you see in the code stand for "blank" space on the screen. You saw this in the first example too: "... banner ...".*/
-   /* "... banner ..."
-    "footer footer footer" */
-}
+    /*"... banner ..."
+    "footer footer footer"; 
+}*/
 header {
     /* give each element some color to see more easily */
     background-color: bisque;
@@ -48,4 +81,8 @@ aside {
 footer {
     background-color: darkslategrey;
     grid-area: footer;
+}
+
+.container {
+    display: grid;
 }
